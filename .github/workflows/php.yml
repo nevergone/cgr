@@ -27,13 +27,11 @@ jobs:
       with:
         php-version: ${{ matrix.php }}
 
-    - name: Use Composer 2.2 LTS
+    - name: Validate composer.json and composer.lock
       uses: php-actions/composer@v6
       with:
         version: 2.2
-
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
+        command: composer validate --strict
 
     - name: Cache Composer packages
       id: composer-cache
