@@ -30,7 +30,7 @@ jobs:
     - name: Validate composer.json and composer.lock
       uses: php-actions/composer@v6
       with:
-        version: 2.2.x
+        composer_version: 2.2.x
         command: validate --strict
 
     - name: Cache Composer packages
