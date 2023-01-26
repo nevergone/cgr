@@ -2,9 +2,9 @@ name: PHP Composer
 
 on:
   push:
-    branches: [ "main", "/^[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+.*$/" ]
+    branches: [ "main", "[0-9]+.[0-9]+.[0-9]+.*" ]
   pull_request:
-    branches: [ "main", "/^[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+.*$/" ]
+    branches: [ "main", "[0-9]+.[0-9]+.[0-9]+.*" ]
 
 permissions:
   contents: read
