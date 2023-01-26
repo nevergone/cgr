@@ -28,7 +28,9 @@ jobs:
         php-version: ${{ matrix.php }}
 
     - name: Use Composer 2.2 LTS
-      run: composer self-update --2.2
+      uses: php-actions/composer@v6
+      with:
+        version: 2.2
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
