@@ -31,7 +31,7 @@ jobs:
       uses: php-actions/composer@v6
       with:
         version: 2.2
-        command: composer validate --strict
+        command: validate --strict
 
     - name: Cache Composer packages
       id: composer-cache
