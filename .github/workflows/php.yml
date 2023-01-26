@@ -48,6 +48,14 @@ jobs:
         version: 2.2.x
         command: install --prefer-dist --no-progress
 
+    - name: Run tests
+      uses: php-actions/composer@v6
+      with:
+        version: 2.2.x
+        command: test
+
+    - name: coveralls
+      run: php vendor/bin/coveralls -v
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
